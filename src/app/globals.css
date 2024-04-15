@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+body{
+  @apply bg-gray-200;
+}
+
+.faded-mask{
+  mask:linear-gradient(90deg, transparent 0%, white 40%, white 60% , transparent 100%);
+}
+
+.infinite_scroll {
+  animation: infiniteScroll 50s linear infinite alternate;
+}
+
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-input {
+  -moz-appearance: textfield;
+}
